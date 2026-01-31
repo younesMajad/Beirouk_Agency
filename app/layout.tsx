@@ -1,7 +1,7 @@
 import React from "react"
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+
 import './globals.css'
 
 const geistSans = Geist({
@@ -17,23 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Beirouk Agency - Digital Marketing Solutions',
   description: 'Professional digital marketing and SEO agency helping small and medium businesses grow online',
-  generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/placeholder-logo.svg',
+    apple: '/placeholder-logo.png',
   },
 }
 
@@ -56,7 +42,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
-          <Analytics />
+
           <Toaster
             position="bottom-right"
             toastOptions={{
@@ -64,6 +50,7 @@ export default function RootLayout({
               style: {
                 background: '#333',
                 color: '#fff',
+
               },
             }}
           />
